@@ -1,0 +1,27 @@
+<?php
+/**
+ * CkeditorConfig <baserCMS plugin>
+ * @package			CkeditorConfig
+ *
+ * setting_customize.php.default を setting_customize.php にリネームして使用してください。
+ * 上書きしたい項目をsetting.phpと同じ構造で指定し変更することで上書きできます。
+ */
+
+/**
+ * 拡張子を制限したい場合はconfigより拡張性定義をunsetして別途定義くだささい。
+ */
+// unset($config['CkeditorConfig']['dtd']['a']);
+// unset($config['CkeditorConfig']['dtd']['removeEmpty']);
+
+$customize_config['CkeditorConfig'] = [
+    'dtd' => [
+        'a' => [
+            // ここにaタグ内に入れることを許可したいタグ名を記入
+        ],
+        'removeEmpty' => [
+            'div'
+            // ここに空を許可したいタグ名を記入
+        ],
+	],
+];
+
