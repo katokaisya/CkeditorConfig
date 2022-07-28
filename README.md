@@ -9,7 +9,9 @@ aタグでブロック要素を挟むと、勝手にaタグの外に出してし
 ### aタグ内に入れることを許可するブロック要素
 Config/setting.php
 $config['CkeditorConfig.dtd.a'] にて
+```
 'div','h1','h2','h3','h4','h5','dl','p',
+```
 を設定しています。
 ※足りない場合は setting_customize.php.default を setting_customize.php にリネームし、
 必要なタグ名をすべて記載してください。
