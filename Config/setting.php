@@ -20,6 +20,8 @@ $config['CkeditorConfig.dtd'] = [
 	// 'span', baserCMS側で許可済み
 	]
 ];
+// 対象コントローラを絞れるようにした（空ならすべてが対象）
+$config['CkeditorConfig.controller'] = [];
 
 // カスタマイズ設定読み込み
 if (file_exists(__DIR__ . DS . 'setting_customize.php')) {

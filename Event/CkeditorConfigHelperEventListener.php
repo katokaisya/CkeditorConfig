@@ -17,9 +17,10 @@ class CkeditorConfigHelperEventListener extends BcHelperEventListener {
 		$View = $event->subject();
 		$controller = $View->request->params['controller'];
 		 // 該当タグリストの読み込み
-		$dtd = Configure::read('CkeditorConfig.dtd');
+		$ckeditorConfig = Configure::read('CkeditorConfig');
+		$dtd = $ckeditorConfig['dtd'];
 		if (BcUtil::isAdminSystem()) {
-			if ($controller == 'blog_posts' || $controller == 'pages') {
+			if (!isset($ckeditorConfig['controller']) || empty($ckeditorConfig['controller']) ||in_array($controller, $ckeditorConfig['controller'])) {
 				echo '<script>';
 				echo 'CKEDITOR.config.basicEntities = false;';
 				echo 'CKEDITOR.config.entities = false;';
@@ -34,7 +35,7 @@ class CkeditorConfigHelperEventListener extends BcHelperEventListener {
 					}
 				}
 				echo '</script>';
-			 }
+			}
 		}
 	}
 
