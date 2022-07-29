@@ -28,5 +28,6 @@ setting_customize.php.default を setting_customize.php にリネームし、
 
 |baserCMS|Plugin|status|comment|
 |:--|:--|:--|:--|
+|4.6.2|1.0.0|未承認||
 |4.6.1.1|1.0.0|未承認||
 |4.6.1|1.0.0|未承認||
